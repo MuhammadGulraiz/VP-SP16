@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class Snake
+    public class Snake
     {
         public Rectangle[] snakerec;
         private SolidBrush brush;
@@ -15,7 +15,7 @@ namespace Snake
 
         public Snake()
         {
-            snakerec = new Rectangle[20];
+            snakerec = new Rectangle[3];
             brush = new SolidBrush (Color.Black);
             x = 30;
             y = 0;
@@ -27,12 +27,14 @@ namespace Snake
                 x = x - 10;
             }
         }
-        public void drawsnake (Graphics paper)
+        public void drawSnake (Graphics paper)
         {
             foreach(Rectangle rec in snakerec)
             {
                 paper.FillRectangle(brush, rec);
             }
         }
+
+       
     }
 }
